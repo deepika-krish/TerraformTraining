@@ -5,7 +5,7 @@
 storage_account_name = "stterraform024"
 
 # Resource Group Configuration - Production
-resource_group_name = "rg-terraform-training"
+resource_group_name = "rg-terraform-training01"
 
 # Azure Region - Production region
 location = "westus2"
