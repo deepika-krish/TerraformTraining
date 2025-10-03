@@ -26,3 +26,16 @@ resource "azurerm_resource_group" "rg" {
   }
 }
 
+# Create a second resource group for additional resources
+resource "azurerm_resource_group" "rg_secondary" {
+  name     = "${var.resource_group_name}-secondary"
+  location = var.location
+
+  tags = {
+    Environment = var.environment
+    Project     = var.project
+    CreatedBy   = "Terraform"
+    Purpose     = "Secondary Resources"
+  }
+}
+
