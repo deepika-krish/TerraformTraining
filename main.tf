@@ -15,13 +15,14 @@ provider "azurerm" {
 }
 
 # Create a resource group
-resource "azurerm_resource_group" "main" {
-  name     = "rg-terraform-training"
-  location = "westus2"
+resource "azurerm_resource_group" "rg" {
+  name     = var.resource_group_name
+  location = var.location
 
   tags = {
-    Environment = "Training"
-    Project     = "TerraformTraining"
+    Environment = var.environment
+    Project     = var.project
     CreatedBy   = "Terraform"
   }
 }
+
